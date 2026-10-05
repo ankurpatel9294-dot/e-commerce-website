@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShopKart</title>
+  <meta name="description" content="An online shopping site: search, filter, cart, wishlist and checkout.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='%23ffd54a' font-family='sans-serif' font-weight='800'%3ESK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap bar">
+      <a href="#home" class="brand" aria-label="ShopKart home"><span class="mark">SK</span><span class="brand-name">ShopKart</span></a>
+      <form id="searchForm" class="search" role="search">
+        <input id="q" type="search" placeholder="Search for products, brands and more" aria-label="Search products" autocomplete="off">
+        <button type="submit" aria-label="Search">🔍</button>
+      </form>
+      <nav class="actions" aria-label="Account">
+        <a href="#wishlist" class="act">♡<span class="lbl">Wishlist</span><b id="wishCount" class="count" hidden></b></a>
+        <a href="#orders" class="act">📦<span class="lbl">Orders</span></a>
+        <a href="#cart" class="act cart">🛒<span class="lbl">Cart</span><b id="cartCount" class="count" hidden></b></a>
+      </nav>
+    </div>
+    <div class="wrap cats" id="catBar" aria-label="Categories"></div>
+  </header>
+
+  <main class="wrap" id="app" aria-live="polite"></main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p><strong>ShopKart</strong> is a practice project. Products are samples and payments are simulated, so no real order is placed and no money is taken.</p>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
